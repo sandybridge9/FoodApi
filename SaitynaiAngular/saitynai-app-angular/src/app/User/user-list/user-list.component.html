@@ -1,0 +1,9 @@
+<button routerLink="/Users-add">Add new User</button>
+<ul *ngIf="users">
+  <li *ngFor="let user of users">
+    <a routerLink="/Users/{{user.id}}">{{user.id}} {{user.name}}</a>
+    <button routerLink="/Users-update/{{user.id}}">Update</button>
+    <button (click)="deleteUser(user.Id)">Delete</button>
+  </li>
+</ul>
+<h1 *ngIf="!users"> LOADING...............</h1>

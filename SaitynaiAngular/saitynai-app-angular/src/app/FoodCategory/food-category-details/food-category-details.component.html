@@ -1,0 +1,9 @@
+<button routerLink="/FoodCategories">Back</button>
+<h1>Food category details</h1>
+<div *ngIf="foodCategory">
+  <h3>{{foodCategory.id}}</h3>
+  <h3>{{foodCategory.name}}</h3>
+</div>
+<div *ngIf="!foodCategory">
+  <h2>Food category not found</h2>
+</div>

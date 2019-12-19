@@ -1,0 +1,11 @@
+<button routerLink="/FoodItems">Back</button>
+<h1>Food item details</h1>
+<div *ngIf="foodItem">
+  <h3>{{foodItem.id}}</h3>
+  <h3>{{foodItem.name}}</h3>
+  <h3>{{foodItem.foodCategoryId}}</h3>
+</div>
+<div *ngIf="!foodItem">
+  <h2>Food Item not found</h2>
+</div>
+

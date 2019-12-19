@@ -1,0 +1,10 @@
+<button class="btn" routerLink="/FoodItems-add">Add Food Item</button>
+<ul *ngIf="foodItems">
+  <li *ngFor="let foodItem of foodItems">
+    <a routerLink="/FoodItems/{{foodItem.id}}">{{foodItem.id}} {{foodItem.name}}</a>
+    <button routerLink="/FoodItems-update/{{foodItem.id}}">Update</button>
+    <button (click)="deleteFoodItem(foodItem.id)">Delete</button>
+  </li>
+</ul>
+<h1 *ngIf="!foodItems"> LOADING...............</h1>
+

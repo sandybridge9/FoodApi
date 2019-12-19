@@ -1,0 +1,20 @@
+<button routerLink="/Users">Back</button>
+<form [formGroup]="userForm" (ngSubmit)="save()">
+  <label>
+    Name:
+    <input type="text" formControlName="Name">
+  </label>
+  <label>
+    User Login Id:
+    <input type="text" formControlName="FoodCategoryId">
+  </label>
+  <label>
+    Birth date:
+    <input type="date" formControlName="Birth">
+  </label>
+  <label>
+    Email:
+    <input type="email" formControlName="Email">
+  </label>
+  <button type="Submit">Save</button>
+</form>

@@ -1,0 +1,9 @@
+<button routerLink="/FoodCategories-add">Add Food category Item</button>
+<ul *ngIf="foodCategories">
+  <li *ngFor="let foodCategory of foodCategories">
+    <a routerLink="/FoodCategory/{{foodCategory.id}}">{{foodCategory.id}} {{foodCategory.name}}</a>
+    <button routerLink="/FoodItems-update/{{foodCategory.id}}">Update</button>
+    <button (click)="deleteFoodCategory(foodCategory.id)">Delete</button>
+  </li>
+</ul>
+<h1 *ngIf="!foodCategories"> LOADING...............</h1>

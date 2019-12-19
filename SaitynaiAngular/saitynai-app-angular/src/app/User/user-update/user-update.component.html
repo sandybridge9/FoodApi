@@ -1,0 +1,12 @@
+<button routerLink="/Users">Back</button>
+<form [formGroup]="userForm" (ngSubmit)="save()">
+  <label>
+    Name:
+    <input type="text" formControlName="Name">
+  </label>
+  <label>
+    Food Category Id:
+    <input type="text" formControlName="UserLoginId">
+  </label>
+  <button type="Submit">Save</button>
+</form>
